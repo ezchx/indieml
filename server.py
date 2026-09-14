@@ -33,3 +33,9 @@ def score_substance(input_text: str) -> float:
         # Extracts the score based on your FastAPI ScoreResponse model
         data = response.json()
         return data["result"]["substance_score"]
+
+def main():
+    mcp.run()
+
+if __name__ == "__main__":
+    main()
