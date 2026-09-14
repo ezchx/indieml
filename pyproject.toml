@@ -1,0 +1,10 @@
+[project]
+name = "indieml-mcp-server"
+version = "0.1.0"
+description = "MCP server for the IndieML Substance API"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]",
+    "httpx"
+]
