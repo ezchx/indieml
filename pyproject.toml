@@ -5,7 +5,7 @@ description = "MCP server for the IndieML Substance API"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "mcp[cli]",
+    "mcp[cli]<2",
     "httpx"
 ]
 [project.scripts]
