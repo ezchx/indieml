@@ -21,7 +21,7 @@ Add the following to your `claude_desktop_config.json` file.
       "command": "uvx",
       "args": [
         "--from",
-        "git+[https://github.com/ezchx/indieml-mcp-server](https://github.com/ezchx/indieml-mcp-server)",
+        "git+https://github.com/ezchx/indieml-mcp-server",
         "mcp",
         "run",
         "server.py"
