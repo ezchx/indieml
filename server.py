@@ -12,7 +12,10 @@ def score_substance(input_text: str) -> float:
     """
     api_key = os.getenv("INDIEML_API_KEY")
     if not api_key:
-        raise ValueError("INDIEML_API_KEY environment variable is required.")
+        raise ValueError(
+            "INDIEML_API_KEY environment variable is required. "
+            "Get a free key at https://indieml.app/"
+        )
 
     # Adjust the header name ("X-API-Key") if your FastAPI verify_api_key depends on a different string like "Authorization"
     headers = {
