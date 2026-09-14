@@ -22,9 +22,7 @@ Add the following to your `claude_desktop_config.json` file.
       "args": [
         "--from",
         "git+https://github.com/ezchx/indieml-mcp-server",
-        "mcp",
-        "run",
-        "server.py"
+        "indieml-mcp-server"
       ],
       "env": {
         "INDIEML_API_KEY": "your_api_key_here"
