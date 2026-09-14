@@ -25,7 +25,7 @@ Add the following to your `claude_desktop_config.json` file.
         "indieml-mcp-server"
       ],
       "env": {
-        "INDIEML_API_KEY": "your api key from https://indieml.app/"
+        "INDIEML_API_KEY": "your api key here"
       }
     }
   }
