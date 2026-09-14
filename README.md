@@ -6,7 +6,7 @@ Returns a 0.0–1.0 substance score for a short passage of text; higher scores i
 
 ## Requirements
 * Python 3.10+
-* An IndieML API Key
+* An IndieML API Key — visit https://indieml.app to request your free API key.
 
 ## Usage with Claude Desktop
 
