@@ -2,7 +2,7 @@
 
 An official Model Context Protocol (MCP) server for the [IndieML Substance API](https://indieml.app). 
 
-This server provides AI assistants (like Claude, Cursor, and Gemini CLI) with the `score_substance` tool, allowing them to instantly evaluate the structural information density of text streams, RAG corpora, or social media feeds.
+A lightweight API that evaluates text for substance, depth, and clarity. It approximates LLM judgments to produce a fast Substance score (0.0 to 1.0), which can be used as a high-speed signal to filter, rank, or preprocess high-volume text streams.
 
 ## Requirements
 * Python 3.10+
