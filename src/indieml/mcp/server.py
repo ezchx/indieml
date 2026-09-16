@@ -3,7 +3,7 @@ import httpx
 from mcp.server.mcpserver import MCPServer
 
 # Initialize the MCP server
-mcp = FastMCP("IndieML Substance Engine")
+mcp = MCPServer("IndieML Substance Engine")
 
 @mcp.tool()
 def score_substance(input_text: str) -> float:
