@@ -8,7 +8,7 @@ mcp = FastMCP("IndieML Substance Engine")
 @mcp.tool()
 def score_substance(input_text: str) -> float:
     """
-    A lightweight API that evaluates text for substance, depth, and clarity. It approximates LLM judgments to produce a fast Substance score (0.0 to 1.0), which can be used as a high-speed signal to filter, rank, or preprocess high-volume text streams.
+    A lightweight API that evaluates text for substance, depth, and clarity. It approximates LLM judgments to produce a fast Substance score (0.0 to 1.0), which can be used as a signal to filter, rank, or preprocess high-volume text streams.
     """
     api_key = os.getenv("INDIEML_API_KEY")
     if not api_key:
