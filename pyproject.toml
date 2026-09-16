@@ -1,5 +1,5 @@
 [project]
-name = "indieml-mcp-server"
+name = "indieml"
 version = "0.1.0"
 description = "MCP server for the IndieML Substance API"
 readme = "README.md"
