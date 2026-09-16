@@ -1,12 +1,17 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "indieml"
 version = "0.1.0"
-description = "MCP server for the IndieML Substance API"
+description = "A collection of text analysis and intelligence APIs, featuring the Model Context Protocol (MCP)."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "mcp[cli]<2",
+    "mcp[cli]",
     "httpx"
 ]
+
 [project.scripts]
-indieml-mcp-server = "server:main"
+indieml = "indieml.mcp.server:main"
