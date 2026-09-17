@@ -40,6 +40,7 @@ To configure your AI assistant, add the following to your MCP configuration file
       }
     }
   },
+  ...
 }
 ```
 ## REST API (Non-Python Environments)
