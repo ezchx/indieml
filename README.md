@@ -34,11 +34,13 @@ To configure your AI assistant, add the following to your MCP configuration file
   "mcpServers": {
     "indieml": {
       "command": "uvx",
-      "args": ["indieml"]
+      "args": ["indieml"],
+      "env": {
+        "INDIEML_API_KEY": "your_api_key_here"
+      }
     }
-  }
+  },
 }
-```
 
 ## REST API (Non-Python Environments)
 
