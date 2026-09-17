@@ -7,7 +7,7 @@ name = "indieml"
 version = "0.1.0"
 description = "A collection of text analysis and intelligence APIs, featuring the Model Context Protocol (MCP)."
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
     "mcp[cli]",
     "httpx"
