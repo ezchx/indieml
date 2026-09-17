@@ -9,8 +9,8 @@ A Python client and Model Context Protocol (MCP) server for the Substance API.
 pip install indieml
 ```
 
-## Quickstart
-```Python
+**Quickstart**
+```python
 from indieml import IndieMLClient
 
 # Initialize the client
