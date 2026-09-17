@@ -5,7 +5,7 @@ An official Model Context Protocol (MCP) server for the [IndieML Substance API](
 Returns a 0.0–1.0 substance score for a short passage of text; higher scores indicate denser, more specific, less filler-heavy language.
 
 ## Requirements
-* Python 3.10+
+* Python 3.11+
 * An IndieML API Key — visit https://indieml.app to request your free API key.
 
 ## Usage with Claude Desktop
