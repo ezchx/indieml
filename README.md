@@ -10,7 +10,7 @@ pip install indieml
 ```
 
 ## Quickstart
-```
+```Python
 from indieml import IndieMLClient
 
 # Initialize the client
