@@ -5,8 +5,7 @@ import urllib.error
 class SubstanceAPI:
     def __init__(self, api_key: str):
         self.api_key = api_key
-        # TODO: Update this URL to match your actual VPS endpoint route!
-        self.base_url = "https://indieml.app/api/substance"
+        self.base_url = "https://indieml.app/v1/score/substance"
 
     def score(self, text: str) -> dict:
         url = f"{self.base_url}/score"
