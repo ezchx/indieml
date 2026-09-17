@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "indieml"
 version = "0.1.2"
-description = "A collection of text analysis and intelligence APIs, featuring the Model Context Protocol (MCP)."
+description = "A Python and MCP integration library for the IndieML Substance API."
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
