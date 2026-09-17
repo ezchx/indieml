@@ -7,6 +7,7 @@ A Python client and Model Context Protocol (MCP) server for the Substance API.
 **Installation**
 ```bash
 pip install indieml
+```
 
 ## Quickstart
 
