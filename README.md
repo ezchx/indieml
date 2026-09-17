@@ -1,32 +1,20 @@
-# IndieML MCP Server
+# IndieML
 
-An official Model Context Protocol (MCP) server for the [IndieML Substance API](https://indieml.app). 
+A Python client and Model Context Protocol (MCP) server for the Substance API. 
 
-Returns a 0.0–1.0 substance score for a short passage of text; higher scores indicate denser, more specific, less filler-heavy language.
+## Python SDK
 
-## Requirements
-* Python 3.11+
-* An IndieML API Key — visit https://indieml.app to request your free API key.
+**Installation**
+```bash
+pip install indieml
 
-## Usage with Claude Desktop
+## Quickstart
 
-Add the following to your `claude_desktop_config.json` file. 
+from indieml import IndieMLClient
 
-*(On Mac: `~/Library/Application Support/Claude/claude_desktop_config.json`)*
+# Initialize the client
+client = IndieMLClient(api_key="your_api_key_here")
 
-```json
-{
-  "mcpServers": {
-    "indieml": {
-      "command": "uvx",
-      "args": [
-        "--from",
-        "git+https://github.com/ezchx/indieml-mcp-server",
-        "indieml-mcp-server"
-      ],
-      "env": {
-        "INDIEML_API_KEY": "YOUR_API_KEY_HERE"
-      }
-    }
-  }
-}
+# Score text using the Substance API
+result = client.substance.score("This is a test run.")
+print(result)
