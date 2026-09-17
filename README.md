@@ -41,7 +41,7 @@ To configure your AI assistant, add the following to your MCP configuration file
     }
   },
 }
-
+```
 ## REST API (Non-Python Environments)
 
 For integrations outside the Python and MCP ecosystems (such as standard OpenAI function calling, custom AI scripts, or raw HTTP requests), IndieML provides a standard REST API.
