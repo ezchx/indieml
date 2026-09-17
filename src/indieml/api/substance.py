@@ -8,11 +8,11 @@ class SubstanceAPI:
         self.base_url = "https://indieml.app/v1/score/substance"
 
     def score(self, text: str) -> dict:
-        url = f"{self.base_url}/score"
+        url = self.base_url
         
-        payload = json.dumps({"text": text}).encode("utf-8")
+        payload = json.dumps({"input_text": text}).encode("utf-8")
         headers = {
-            "Authorization": f"Bearer {self.api_key}",
+            "X-API-KEY": self.api_key,
             "Content-Type": "application/json"
         }
         
