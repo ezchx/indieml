@@ -21,7 +21,7 @@ class SubstanceAPI:
 
         for attempt in range(max_retries + 1):
             try:
-                with urllib.request.urlopen(req) as response:
+                with urllib.request.urlopen(req, timeout=10.0) as response:
                     return json.loads(response.read().decode("utf-8"))
                     
             except urllib.error.HTTPError as e:
