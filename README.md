@@ -88,13 +88,16 @@ For local clients that require stdio transport, use the npx mcp-remote bridge to
       "command": "npx",
       "args": [
         "-y",
-        "@modelcontextprotocol/mcp-remote",
-        "https://indieml.app/mcp/"
+        "mcp-remote",
+        "https://indieml.app/mcp/",
+        "--header",
+        "X-Api-Key:${INDIEML_API_KEY}"
       ],
       "env": {
         "INDIEML_API_KEY": "YOUR_API_KEY_HERE"
       }
     }
   }
+
 }
 ```
