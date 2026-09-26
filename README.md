@@ -80,7 +80,7 @@ For agents that support native Streamable HTTP / SSE configurations, provide the
 ```
 
 ### Claude Desktop (stdio via npx Bridge)
-For local clients that require stdio transport, use the npx mcp-remote bridge to route the connection to the cloud endpoint. Node.js v20+ is required. Ensure your OS environment variables include INDIEML_API_KEY.
+For local Linux, Mac, and Windows clients that require stdio transport, use the npx mcp-remote bridge to route the connection to the cloud endpoint. Node.js v20+ is required. Ensure your OS environment variables include INDIEML_API_KEY.
 ```json
 {
   "mcpServers": {
