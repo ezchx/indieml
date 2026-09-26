@@ -64,12 +64,13 @@ print(result)
 
 You can natively integrate the Substance API into AI coding assistants by routing them to our cloud-native ASGI endpoints.
 
-### Cursor and ChatGPT (Streamable HTTP)
+### Cursor, ChatGPT, and Claude Code (Streamable HTTP)
 For agents that support native Streamable HTTP / SSE configurations, provide the remote URL and authorization header directly:
 ```json
 {
   "mcpServers": {
     "indieml": {
+      "type": "http",
       "url": "https://indieml.app/mcp/",
       "headers": {
         "X-API-Key": "YOUR_API_KEY_HERE"
