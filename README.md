@@ -10,7 +10,7 @@ For integrations outside the Python and MCP ecosystems (such as standard OpenAI 
 
 **cURL**
 ```bash
-curl -X POST "[https://indieml.app/v1/score/substance](https://indieml.app/v1/score/substance)" \
+curl -X POST https://indieml.app/v1/score/substance \
   -H "X-API-Key: YOUR_API_KEY_HERE" \
   -H "Content-Type: application/json" \
   -d '{"input_text": "This is a test run."}'
@@ -21,7 +21,7 @@ curl -X POST "[https://indieml.app/v1/score/substance](https://indieml.app/v1/sc
 import requests
 
 response = requests.post(
-    "[https://indieml.app/v1/score/substance](https://indieml.app/v1/score/substance)",
+    "https://indieml.app/v1/score/substance",
     headers={"X-API-Key": "YOUR_API_KEY_HERE"},
     json={"input_text": "This is a test run."}
 )
@@ -30,7 +30,7 @@ print(response.json())
 
 **Node.js (Fetch)**
 ```javascript
-const response = await fetch("[https://indieml.app/v1/score/substance](https://indieml.app/v1/score/substance)", {
+const response = await fetch("https://indieml.app/v1/score/substance", {
   method: "POST",
   headers: {
     "X-API-Key": "YOUR_API_KEY_HERE",
@@ -70,7 +70,7 @@ For agents that support native Streamable HTTP / SSE configurations, provide the
 {
   "mcpServers": {
     "indieml": {
-      "url": "[https://indieml.app/mcp/](https://indieml.app/mcp/)",
+      "url": "https://indieml.app/mcp/",
       "headers": {
         "X-API-Key": "YOUR_API_KEY_HERE"
       }
@@ -89,7 +89,7 @@ For local clients that require stdio transport, use the npx mcp-remote bridge to
       "args": [
         "-y",
         "@modelcontextprotocol/mcp-remote",
-        "[https://indieml.app/mcp/](https://indieml.app/mcp/)"
+        "https://indieml.app/mcp/"
       ],
       "env": {
         "INDIEML_API_KEY": "YOUR_API_KEY_HERE"
