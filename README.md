@@ -52,8 +52,8 @@ pip install indieml
 ```python
 from indieml import Substance
 
-# Initialize the API. Automatically defaults to the INDIEML_API_KEY environment variable.
-api = Substance(api_key="your_api_key_here")
+# Initialize the API
+api = Substance(api_key="YOUR_API_KEY_HERE")
 
 # Evaluate text for substance, depth, and clarity
 result = api.score("This is a test run.")
