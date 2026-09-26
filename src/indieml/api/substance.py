@@ -13,7 +13,7 @@ class SubstanceAPI:
         
         payload = json.dumps({"input_text": text}).encode("utf-8")
         headers = {
-            "X-API-KEY": self.api_key,
+            "X-API-Key": self.api_key,
             "Content-Type": "application/json"
         }
         
