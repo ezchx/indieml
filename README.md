@@ -62,7 +62,7 @@ print(result)
 
 ## MCP Server Integration
 
-You can natively integrate the Substance API into modern AI coding assistants by routing them to our cloud-native ASGI endpoints.
+You can natively integrate the Substance API into AI coding assistants by routing them to our cloud-native ASGI endpoints.
 
 ### Cursor and ChatGPT (Streamable HTTP)
 For agents that support native Streamable HTTP / SSE configurations, provide the remote URL and authorization header directly:
@@ -80,7 +80,7 @@ For agents that support native Streamable HTTP / SSE configurations, provide the
 ```
 
 ### Claude Desktop (stdio via npx Bridge)
-For local clients that require stdio transport, use the npx mcp-remote bridge to seamlessly route the connection to the cloud endpoint. Node.js v20+ is required. Ensure your OS environment variables include INDIEML_API_KEY.
+For local clients that require stdio transport, use the npx mcp-remote bridge to route the connection to the cloud endpoint. Node.js v20+ is required. Ensure your OS environment variables include INDIEML_API_KEY.
 ```json
 {
   "mcpServers": {
