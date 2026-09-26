@@ -98,6 +98,5 @@ For local clients that require stdio transport, use the npx mcp-remote bridge to
       }
     }
   }
-
 }
 ```
