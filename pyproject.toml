@@ -4,13 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "indieml"
-version = "0.1.7"
-description = "A Python and MCP integration library for the IndieML Substance API."
+version = "0.1.8"
+description = "A Python integration library for the IndieML Substance API."
 readme = "README.md"
 requires-python = ">=3.11"
-dependencies = [
-    "mcp[cli]"
-]
-
-[project.scripts]
-indieml = "indieml.mcp.server:main"
