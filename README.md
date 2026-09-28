@@ -46,6 +46,7 @@ console.log(await response.json());
 ## Python SDK
 
 **Installation**
+Requires Python 3.11 or higher.
 ```bash
 pip install indieml
 ```
