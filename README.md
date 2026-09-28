@@ -4,6 +4,8 @@ A lightweight, transformer-based API that evaluates text for substance, depth, a
 
 This package provides REST API, Python SDK, and MCP configuration details to natively connect the hosted Substance API to a wide variety of applications.
 
+To request an API key, please visit https://indieml.app.
+
 ## REST API 
 
 For integrations outside the Python and MCP ecosystems (such as standard OpenAI function calling, custom AI scripts, or raw HTTP requests), the hosted endpoint accepts standard JSON payload requests.
