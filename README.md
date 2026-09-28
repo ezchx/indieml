@@ -64,7 +64,7 @@ print(result)
 
 ## MCP Server Integration
 
-You can natively integrate the Substance API into AI coding assistants by routing them to our cloud-native ASGI endpoints.
+You can integrate the Substance API into AI coding assistants by routing them to our cloud-native ASGI endpoints.
 
 ### Cursor, ChatGPT, and Claude Code (Streamable HTTP)
 For agents that support native Streamable HTTP / SSE configurations, provide the remote URL and authorization header directly:
