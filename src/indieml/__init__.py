@@ -1,3 +1,3 @@
-from .client import IndieMLClient
+from .client import Substance
 
-__all__ = ["IndieMLClient"]
+__all__ = ["Substance"]
