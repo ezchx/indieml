@@ -106,7 +106,7 @@ For local Linux, Mac, and Windows clients that require stdio transport, use the 
 
 ## Applications & Use Cases
 
-The Substance API is designed to run alongside your existing classification tools. It is not a magical oracle; it is a fast, inexpensive text feature endpoint that your systems can use to make deterministic routing and filtering decisions. 
+The Substance API is designed to run alongside your existing classification tools as a fast, inexpensive text feature endpoint that your systems can use to make deterministic routing and filtering decisions. 
 
 While it evaluates substance across any text, it is uniquely suited for high-volume, automated data pipelines:
 
