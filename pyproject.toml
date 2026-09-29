@@ -8,3 +8,4 @@ version = "0.1.10"
 description = "A Python integration library for the IndieML Substance API."
 readme = "README.md"
 requires-python = ">=3.11"
+keywords = ["mcp", "mcp-server", "modelcontextprotocol", "nlp", "rag"]
