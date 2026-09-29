@@ -111,7 +111,7 @@ The Substance API is a fast and inexpensive pre-screening tool designed to integ
 While it evaluates substance across any text, it is uniquely suited for high-volume, automated data pipelines:
 
 ### 1. RAG & AI Knowledge-Base Preprocessing
-Pre-filter text before expensive LLM vectorization and processing
+Pre-filter text before expensive LLM vectorization and processing.
 * **Knowledge Portals:** Filter out bloated, low-signal documentation prior to indexing.
 * **Document Archives:** Rank corporate or research archives based on actual information density.
 * **Feed Aggregation:** Rank news, newsletters, or educational content by structural depth rather than just recency or click-through rates.
