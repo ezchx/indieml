@@ -106,18 +106,18 @@ For local Linux, Mac, and Windows clients that require stdio transport, use the 
 
 ## Applications & Use Cases
 
-The Substance API is designed to run alongside your existing classification tools as a fast, inexpensive text feature endpoint that your systems can use to make deterministic routing and filtering decisions. 
+The Substance API is a fast and inexpensive pre-screening tool designed to integrate with your existing classification pipeline.
 
 While it evaluates substance across any text, it is uniquely suited for high-volume, automated data pipelines:
 
 ### 1. RAG & AI Knowledge-Base Preprocessing
-Pre-filter text before vectorization so your AI agents only retrieve from high-density, substantive data.
+Pre-filter text before expensive LLM vectorization and processing
 * **Knowledge Portals:** Filter out bloated, low-signal documentation prior to indexing.
 * **Document Archives:** Rank corporate or research archives based on actual information density.
 * **Feed Aggregation:** Rank news, newsletters, or educational content by structural depth rather than just recency or click-through rates.
 
 ### 2. Automated Content Triage & Large-Scale Screening
 Route inbound text based on substance, clarity, and depth rather than relying solely on keywords or sentiment analysis.
-* **Support Tickets:** Identify highly detailed bug reports and instantly route them past basic classification bots to Tier 2 engineering.
-* **Customer Feedback:** Isolate actionable product critiques from generic "it's great" or "it's broken" noise.
+* **Support Tickets:** Identify highly detailed bug reports and instantly route them past basic classification bots to human operators.
+* **Customer Feedback:** Isolate high-quality product critiques from generic "it's great" or "it's broken" noise.
 * **User-Generated Content:** Surface high-effort, high-value forum posts and survey responses while programmatically burying low-effort spam.
