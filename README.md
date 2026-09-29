@@ -120,4 +120,4 @@ Pre-filter text before expensive LLM vectorization and processing.
 Route inbound text based on substance, clarity, and depth rather than relying solely on keywords or sentiment analysis.
 * **Support Tickets:** Identify highly detailed bug reports and instantly route them past basic classification bots to human operators.
 * **Customer Feedback:** Isolate high-quality product critiques from generic "it's great" or "it's broken" noise.
-* **User-Generated Content:** Surface high-effort, high-value forum posts and survey responses while programmatically burying low-effort spam.
+* **User-Generated Content:** Surface high-effort, high-value forum posts and survey responses while automatically burying low-effort spam.
