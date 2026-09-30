@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.ezchx/indieml",
+  "title": "IndieML Substance API",
+  "description": "Scores text for substance, depth, and clarity in under 25ms.",
+  "version": "0.1.14",
+  "repository": {
+    "url": "https://github.com/ezchx/indieml",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://indieml.app/mcp/",
+      "headers": [
+        {
+          "name": "X-Api-Key",
+          "description": "Your IndieML API key (get one at https://indieml.app)",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
