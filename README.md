@@ -119,3 +119,5 @@ Route inbound text based on substance, clarity, and depth rather than relying so
 * **Support Tickets:** Identify highly detailed bug reports and instantly route them past basic classification bots to human operators.
 * **Customer Feedback:** Isolate high-quality product critiques from generic "it's great" or "it's broken" noise.
 * **User-Generated Content:** Surface high-effort, high-value forum posts and survey responses while automatically burying low-effort spam.
+
+<!-- mcp-name: io.github.ezchx/indieml -->
