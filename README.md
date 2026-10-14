@@ -110,6 +110,8 @@ While it evaluates substance across any text, it is uniquely suited for high-vol
 
 ### 1. CRM & Support Triage
 Evaluate customer tickets for actionable detail in real time. Route zero-context inquiries for automated follow-up while surfacing dense, high-information cases directly to human agents.
+https://github.com/ezchx/indieml-salesforce-integration
+https://github.com/ezchx/indieml-zendesk-integration
 
 ### 2. Corporate Email Efficiency
 Apply a substance threshold to internal communications. Filter out administrative noise, empty "reply-all" agreements, and low-density threads to reduce cognitive load and inbox bloat for knowledge workers.
