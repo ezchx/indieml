@@ -104,20 +104,26 @@ For local Linux, Mac, and Windows clients that require stdio transport, use the 
 
 ## Applications & Use Cases
 
-The Substance API is a fast and inexpensive pre-screening tool designed to integrate with your existing classification pipeline.
+The Substance API is a fast and inexpensive pre-screening tool designed to integrate with your existing filters.
 
 While it evaluates substance across any text, it is uniquely suited for high-volume, automated data pipelines:
 
-### 1. RAG & AI Knowledge-Base Preprocessing
-Pre-filter text before expensive LLM vectorization and processing.
-* **Knowledge Portals:** Filter out bloated, low-signal documentation prior to indexing.
-* **Document Archives:** Rank corporate or research archives based on actual information density.
-* **Feed Aggregation:** Rank news, newsletters, or educational content by structural depth rather than just recency or click-through rates.
+### 1. CRM & Support Triage
+Evaluate customer tickets for actionable detail in real time. Route zero-context inquiries for automated follow-up while surfacing dense, high-information cases directly to human agents.
 
-### 2. Automated Content Triage & Large-Scale Screening
-Route inbound text based on substance, clarity, and depth rather than relying solely on keywords or sentiment analysis.
-* **Support Tickets:** Identify highly detailed bug reports and instantly route them past basic classification bots to human operators.
-* **Customer Feedback:** Isolate high-quality product critiques from generic "it's great" or "it's broken" noise.
-* **User-Generated Content:** Surface high-effort, high-value forum posts and survey responses while automatically burying low-effort spam.
+### 2. Corporate Email Efficiency
+Apply a substance threshold to internal communications. Filter out administrative noise, empty "reply-all" agreements, and low-density threads to reduce cognitive load and inbox bloat for knowledge workers.
+
+### 3. RAG Pipeline Pre-processing
+Clean vector databases by dropping low-signal text chunks before embedding. Eliminate navigation boilerplate and filler content to cut token costs and significantly improve retrieval accuracy.
+
+### 4. Community Moderation
+Surface high-effort, detailed contributions in online forums and social platforms. Automatically filter out low-effort noise, short generic agreements, and zero-value comments without relying strictly on user upvotes.
+
+### 5. Enterprise Search
+Rank corporate knowledge bases, wikis, and document archives by actual information density. Ensure detail-rich, substantive files surface above repetitive, shallow, or outdated internal documents.
+
+### 6. Feedback & Review Analysis
+Isolate high-quality product critiques from floods of generic feedback. Instantly separate detailed feature requests and actionable bug reports from zero-context "it's great" or "it's broken" reviews.
 
 <!-- mcp-name: io.github.ezchx/indieml -->
