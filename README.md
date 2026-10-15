@@ -113,19 +113,19 @@ Evaluate customer tickets for actionable detail in real time. Route zero-context
 [Salesforce Integration Guide](https://github.com/ezchx/indieml-salesforce-integration)  
 [Zendesk Integration Guide](https://github.com/ezchx/indieml-zendesk-integration)
 
-### 2. Corporate Email Efficiency
-Apply a substance threshold to internal communications. Filter out administrative noise, empty "reply-all" agreements, and low-density threads to reduce cognitive load and inbox bloat for knowledge workers.
-
-### 3. RAG Pipeline Pre-processing
+### 2. RAG Pipeline Pre-processing
 Clean vector databases by dropping low-signal text chunks before embedding. Eliminate navigation boilerplate and filler content to cut token costs and significantly improve retrieval accuracy.
 
-### 4. Community Moderation
+### 3. Community Moderation
 Surface high-effort, detailed contributions in online forums and social platforms. Automatically filter out low-effort noise, short generic agreements, and zero-value comments without relying strictly on user upvotes.
 
-### 5. Enterprise Search
+### 4. Enterprise Search
 Rank corporate knowledge bases, wikis, and document archives by actual information density. Ensure detail-rich, substantive files surface above repetitive, shallow, or outdated internal documents.
 
-### 6. Feedback & Review Analysis
+### 5. Feedback & Review Analysis
 Isolate high-quality product critiques from floods of generic feedback. Instantly separate detailed feature requests and actionable bug reports from zero-context "it's great" or "it's broken" reviews.
+
+### 6. LLM Context Filtering
+Reduce LLM processing costs and improve agent output quality by filtering out low substance content before inference.
 
 <!-- mcp-name: io.github.ezchx/indieml -->
