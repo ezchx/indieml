@@ -3,7 +3,7 @@
   "name": "io.github.ezchx/indieml",
   "title": "IndieML Substance API",
   "description": "Scores text for substance, depth, and clarity in under 25ms.",
-  "version": "0.1.14",
+  "version": "0.1.19",
   "repository": {
     "url": "https://github.com/ezchx/indieml",
     "source": "github"
