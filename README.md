@@ -109,7 +109,7 @@ The Substance API is a fast and inexpensive pre-screening tool designed to integ
 While it evaluates substance across any text, it is uniquely suited for high-volume, automated data pipelines:
 
 ### Inbox & Intake Triage
-Score support tickets, shared mailboxes, lead forms, and bug reports before a human opens them. Auto-request missing details from vague one-liners and put detailed, actionable messages first. Works as an API call, a mail header, or a label in the tools you already use.
+Score support tickets, shared mailboxes, lead forms, and bug reports before a human opens them. Auto-request missing details from vague one-liners and put detailed, actionable messages first. Works as an API call, a mail header, or a label in the tools you already use.\
 [Salesforce Integration Guide](https://github.com/ezchx/indieml-salesforce-integration)  
 [Zendesk Integration Guide](https://github.com/ezchx/indieml-zendesk-integration)
 
