@@ -9,6 +9,7 @@ jobs:
     name: Build and publish to PyPI
     runs-on: ubuntu-latest
     environment: release
+    if: startsWith(github.event.release.tag_name, 'py-v')
     permissions:
       id-token: write
       contents: read
