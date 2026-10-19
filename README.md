@@ -108,24 +108,24 @@ The Substance API is a fast and inexpensive pre-screening tool designed to integ
 
 While it evaluates substance across any text, it is uniquely suited for high-volume, automated data pipelines:
 
-### 1. CRM & Support Triage
-Score inbound support tickets, emails, and lead forms based on information density before an agent sees the record. Automatically trigger follow-up emails for vague, one-line inquiries like "my login is broken," while routing detailed tickets containing error logs and reproduction steps to human agents.
+### Inbox & Intake Triage
+Score support tickets, shared mailboxes, lead forms, and bug reports before a human opens them. Auto-request missing details from vague one-liners and put detailed, actionable messages first. Works as an API call, a mail header, or a label in the tools you already use.
 [Salesforce Integration Guide](https://github.com/ezchx/indieml-salesforce-integration)  
 [Zendesk Integration Guide](https://github.com/ezchx/indieml-zendesk-integration)
 
-### 2. Real-Time Form & Input Coaching
-Prevent low-context submissions before they ever enter your database. IndieML can run inside web forms, bug reporters, and marketplace listings prompting users to add missing details so your team receives actionable data without having to circle back to the user.
+### Live Input Coaching
+Catch thin submissions at the source. Add IndieML to forms, listings, and bug reporters to prompt people for what's missing while they're still typing. Your team gets complete, usable input the first time, without chasing follow-ups.
 
-### 3. Product Feedback & Review Triage
-Separate actionable bug reports and architectural critiques from zero-context "great app" or "it's broken" ratings. IndieML evaluates survey responses and app reviews on submission, routing detailed descriptions of workflow bottlenecks or reproducible bugs directly to Jira, Linear, or Slack while filtering out generic feedback.
+### Feedback & Review Triage
+Separate real signal from "great app" and "it's broken." Score survey responses, NPS comments, and app reviews as they arrive, then route detailed, reproducible feedback to Jira, Linear, or Slack and keep generic noise out of the way.
 
-### 4. Agent & LLM Context Filtering
-Autonomous agents routinely pull noisy web scrapes and bloated tool outputs into their context windows, wasting tokens and degrading accuracy. Sitting inline as a sub-25ms pre-filter, IndieML strips low-substance text segments from the prompt payload before you make an expensive LLM call.
+### LLM Context & RAG Filtering
+Stop paying tokens for noise. Pre-filter scraped pages, tool outputs, and document chunks, dropping menus, boilerplate, and stub text before it reaches your embedding model or prompt. Lower cost, faster calls, better answers.
 
-### 5. RAG & Dataset Gatekeeping
-Standard RAG pipelines embed entire documents, filling vector databases with navigation menus, boilerplate disclaimers, and shallow stub articles. IndieML scores and filters text before it is submitted to an expensive model to reduce costs and improve data quality.
+### Dataset Curation
+Rank and filter large text collections without paying for LLM-as-a-judge. Build fine-tuning sets, clean scraped corpora, and assemble eval sets by keeping high-substance text and dropping filler, in batch and at scale.
 
-### 6. Dataset Curation & Stream Filtering
-Filter fine-tuning data, scraped web text, or live social streams without paying LLM-as-a-judge compute costs. IndieML evaluates text segments to strip generic filler and low-effort comments—curating high-density JSONL training sets and powering real-time, high-signal feeds.
+### Content & Output Quality
+Surface the most substantive answers, comments, and reviews in communities and feeds, or monitor chatbot and agent responses for fluff in CI and production. One consistent score for any text where depth matters.
 
 <!-- mcp-name: io.github.ezchx/indieml -->
