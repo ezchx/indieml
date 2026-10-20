@@ -1,12 +1,12 @@
 {
   "name": "indieml",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Node.js and TypeScript client for the IndieML Substance scoring API",
   "repository": {
     "type": "git",
     "url": "https://github.com/ezchx/indieml.git",
     "directory": "node"
-  }
+  },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
