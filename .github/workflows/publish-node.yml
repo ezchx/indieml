@@ -1,1 +1,37 @@
+name: Publish Node SDK
 
+on:
+  push:
+    tags:
+      - 'node-v*'
+
+jobs:
+  publish-npm:
+    name: Build and publish to npm
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write # Required for Trusted Publishing (OIDC)
+      contents: read
+      
+    defaults:
+      run:
+        working-directory: ./node
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build package
+        run: npm run build
+
+      - name: Publish to npm
+        run: npm publish --provenance --access public
