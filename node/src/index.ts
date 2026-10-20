@@ -35,7 +35,8 @@ export class IndieML {
       throw new Error(`IndieML API Error (${response.status}): ${errorText}`);
     }
 
-    return response.json() as Promise<ScoreResponse>;
+    const data = await response.json();
+    return data.result as ScoreResponse;
   }
 }
 
