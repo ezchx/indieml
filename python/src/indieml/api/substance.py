@@ -22,7 +22,8 @@ class SubstanceAPI:
         for attempt in range(max_retries + 1):
             try:
                 with urllib.request.urlopen(req, timeout=10.0) as response:
-                    return json.loads(response.read().decode("utf-8"))
+                    data = json.loads(response.read().decode("utf-8"))
+                    return data.get("result", data)
                     
             except urllib.error.HTTPError as e:
                 if e.code in (400, 401, 403, 422):
