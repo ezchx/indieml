@@ -109,12 +109,10 @@ print(batch_result)
 npm install indieml
 ```
 
-**Usage**
+**Usage (CommonJS)**
 ```javascript
 
-// Initialize IndieML based on your environment
-const { IndieML } = require('indieml'); // CommonJS
-import { IndieML } from 'indieml'; // ES Modules / TypeScript
+const { IndieML } = require('indieml');
 
 // Initialize the API
 const api = new IndieML({ apiKey: 'YOUR_API_KEY_HERE' });
@@ -127,6 +125,26 @@ console.log(singleResult);
 const batchResult = await api.scoreBatch(["This is a test run.", "This is another test run."])
 console.log(batchResult)
 ```
+
+**Usage (ES Modules / TypeScript)**
+```javascript
+
+import { IndieML } from 'indieml';
+
+// Initialize the API
+const api = new IndieML({ apiKey: 'YOUR_API_KEY_HERE' });
+
+// Evaluate a single string
+const singleResult = await api.score("This is a test run.");
+console.log(singleResult);
+
+// Evaluate an array of strings (automatically chunks into batches of 100)
+const batchResult = await api.scoreBatch(["This is a test run.", "This is another test run."])
+console.log(batchResult)
+```
+
+
+
 
 ## MCP Server Integration
 
