@@ -44,6 +44,7 @@ console.log(await response.json());
 
 **Batch Evaluation**
 Process up to 100 strings per request.
+
 **cURL**
 ```bash
 curl -X POST https://indieml.app/v1/score/substance/batch \
@@ -94,7 +95,7 @@ api = Substance(api_key="YOUR_API_KEY_HERE")
 # Evaluate a single string
 single_result = api.score("This is a test run.")
 print(single_result)
-```
+
 # Evaluate an array of strings (automatically chunks into batches of 100)
 batch_result = api.score_batch(["This is a test run.", "This is another test run."])
 print(batch_result)
@@ -117,7 +118,7 @@ const api = new IndieML({ apiKey: 'YOUR_API_KEY_HERE' });
 # Evaluate a single string
 const singleResult = await api.score("This is a test run.");
 console.log(singleResult);
-```
+
 # Evaluate an array of strings (automatically chunks into batches of 100)
 const batchResult = await api.scoreBatch(["This is a test run.", "This is another test run."])
 console.log(batchResult)
