@@ -18,7 +18,7 @@ curl -X POST https://indieml.app/v1/score/substance \
   -d '{"input_text": "This is a test run."}'
 ```
 
-**Python (Requests)**
+**Python**
 ```python
 import requests
 
@@ -30,7 +30,7 @@ response = requests.post(
 print(response.json())
 ```
 
-**Node.js (Fetch)**
+**Node.js**
 ```javascript
 const response = await fetch("https://indieml.app/v1/score/substance", {
   method: "POST",
@@ -54,7 +54,7 @@ curl -X POST https://indieml.app/v1/score/substance/batch \
   -d '{"input_texts": ["This is a test run.", "This is another test run."]}'
 ```
 
-**Python (Requests)**
+**Python**
 ```python
 import requests
 
@@ -66,7 +66,7 @@ response = requests.post(
 print(response.json())
 ```
 
-**Node.js (Fetch)**
+**Node.js**
 ```javascript
 const response = await fetch("https://indieml.app/v1/score/substance/batch", {
   method: "POST",
