@@ -111,7 +111,7 @@ npm install indieml
 
 **Usage**
 ```javascript
-import { IndieML } from 'indieml';
+const { IndieML } = require('indieml');
 
 // Initialize the API
 const api = new IndieML({ apiKey: 'YOUR_API_KEY_HERE' });
