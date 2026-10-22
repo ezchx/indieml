@@ -6,6 +6,8 @@ export interface IndieMLOptions {
 }
 
 export interface ScoreResponse {
+  /** The text that was evaluated */
+  text: string;
   /** The calculated substance score between 0.0 and 1.0 */
   substance_score: number;
 }
