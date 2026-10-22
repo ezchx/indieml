@@ -73,7 +73,7 @@ export class IndieML {
   }
 
   /**
-   * Evaluates a single string of text for substance, depth, and clarity.
+   * Evaluates a single string of text for substance.
    * @param text The input string to score.
    * @param maxRetries Maximum number of times to retry failed network requests.
    */
