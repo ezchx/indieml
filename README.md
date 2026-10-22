@@ -112,7 +112,7 @@ npm install indieml
 **Usage**
 ```javascript
 
-// Use require or import based on your environment
+// Initialize IndieML based on your environment
 const { IndieML } = require('indieml'); // CommonJS
 import { IndieML } from 'indieml'; // ES Modules / TypeScript
 
