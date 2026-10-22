@@ -8,7 +8,7 @@ For more information, including API key requests, please visit [IndieML](https:/
 
 For integrations outside the Python and MCP ecosystems (such as standard OpenAI function calling, custom AI scripts, or raw HTTP requests), the hosted endpoint accepts standard JSON payload requests.
 
-###Single Evaluation
+### Single Evaluation
 
 **cURL**
 ```bash
@@ -43,7 +43,7 @@ const response = await fetch("https://indieml.app/v1/score/substance", {
 console.log(await response.json());
 ```
 
-###Batch Evaluation
+### Batch Evaluation
 Process up to 100 strings per request.
 
 **cURL**
