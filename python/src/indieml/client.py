@@ -1,4 +1,5 @@
 import os
+from typing import List
 from .api.substance import SubstanceAPI
 
 class Substance:
