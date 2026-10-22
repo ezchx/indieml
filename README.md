@@ -8,6 +8,7 @@ For more information, including API key requests, please visit [IndieML](https:/
 
 For integrations outside the Python and MCP ecosystems (such as standard OpenAI function calling, custom AI scripts, or raw HTTP requests), the hosted endpoint accepts standard JSON payload requests.
 
+**Single Evaluation**
 **cURL**
 ```bash
 curl -X POST https://indieml.app/v1/score/substance \
@@ -41,6 +42,41 @@ const response = await fetch("https://indieml.app/v1/score/substance", {
 console.log(await response.json());
 ```
 
+**Batch Evaluation**
+Process up to 100 strings per request.
+**cURL**
+```bash
+curl -X POST https://indieml.app/v1/score/substance/batch \
+  -H "X-API-Key: YOUR_API_KEY_HERE" \
+  -H "Content-Type: application/json" \
+  -d '{"input_texts": ["This is a test run.", "This is another test run."]}'
+```
+
+**Python (Requests)**
+```python
+import requests
+
+response = requests.post(
+    "https://indieml.app/v1/score/substance/batch",
+    headers={"X-API-Key": "YOUR_API_KEY_HERE"},
+    json={"input_texts": ["This is a test run.", "This is another test run."]}
+)
+print(response.json())
+```
+
+**Node.js (Fetch)**
+```javascript
+const response = await fetch("https://indieml.app/v1/score/substance/batch", {
+  method: "POST",
+  headers: {
+    "X-API-Key": "YOUR_API_KEY_HERE",
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({ input_texts: ["This is a test run.", "This is another test run."] })
+});
+console.log(await response.json());
+```
+
 ## Python SDK
 
 **Installation** (requires Python 3.11 or higher)
@@ -55,9 +91,36 @@ from indieml import Substance
 # Initialize the API
 api = Substance(api_key="YOUR_API_KEY_HERE")
 
-# Evaluate text for substance, depth, and clarity
-result = api.score("This is a test run.")
-print(result)
+# Evaluate a single string
+single_result = api.score("This is a test run.")
+print(single_result)
+```
+# Evaluate an array of strings (automatically chunks into batches of 100)
+batch_result = api.score_batch(["This is a test run.", "This is another test run."])
+print(batch_result)
+```
+
+## Node SDK
+
+**Installation**
+```bash
+npm install indieml
+```
+
+**Usage**
+```javascript
+import { IndieML } from 'indieml';
+
+# Initialize the API
+const api = new IndieML({ apiKey: 'YOUR_API_KEY_HERE' });
+
+# Evaluate a single string
+const singleResult = await api.score("This is a test run.");
+console.log(singleResult);
+```
+# Evaluate an array of strings (automatically chunks into batches of 100)
+const batchResult = await api.scoreBatch(["This is a test run.", "This is another test run."])
+console.log(batchResult)
 ```
 
 ## MCP Server Integration
