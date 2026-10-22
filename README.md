@@ -112,14 +112,14 @@ npm install indieml
 ```javascript
 import { IndieML } from 'indieml';
 
-# Initialize the API
+// Initialize the API
 const api = new IndieML({ apiKey: 'YOUR_API_KEY_HERE' });
 
-# Evaluate a single string
+// Evaluate a single string
 const singleResult = await api.score("This is a test run.");
 console.log(singleResult);
 
-# Evaluate an array of strings (automatically chunks into batches of 100)
+// Evaluate an array of strings (automatically chunks into batches of 100)
 const batchResult = await api.scoreBatch(["This is a test run.", "This is another test run."])
 console.log(batchResult)
 ```
