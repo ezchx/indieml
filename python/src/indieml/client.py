@@ -17,3 +17,6 @@ class Substance:
         
     def score(self, text: str):
         return self._client.score(text)
+
+    def score_batch(self, texts: List[str]):
+        return self._client.score_batch(texts)
