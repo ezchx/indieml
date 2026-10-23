@@ -39,13 +39,15 @@ print(response.json())
 
 **Node.js**
 ```javascript
-const response = await fetch("https://indieml.app/v1/score/substance", {
-  method: "POST",
+const response = await fetch('https://indieml.app/v1/score/substance', {
+  method: 'POST',
   headers: {
-    "X-API-Key": "YOUR_API_KEY_HERE",
-    "Content-Type": "application/json"
+    'X-API-KEY': 'YOUR_API_KEY',
+    'Content-Type': 'application/json'
   },
-  body: JSON.stringify({ input_text: "This is a test run." })
+  body: JSON.stringify({
+    input_text: "This is a test run."
+  })
 });
 console.log(await response.json());
 ```
