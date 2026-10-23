@@ -22,18 +22,6 @@ curl -X POST https://indieml.app/v1/score/substance \
 ```python
 import requests
 
-response = requests.post(
-    "https://indieml.app/v1/score/substance",
-    headers={"X-API-Key": "YOUR_API_KEY_HERE"},
-    json={"input_text": "This is a test run."}
-)
-print(response.json())
-```
-
-**Python**
-```python
-import requests
-
 url = "https://indieml.app/v1/score/substance"
 headers = {
     "X-API-KEY": "YOUR_API_KEY",
