@@ -58,32 +58,41 @@ Process up to 100 strings per request.
 **cURL**
 ```bash
 curl -X POST https://indieml.app/v1/score/substance/batch \
-  -H "X-API-Key: YOUR_API_KEY_HERE" \
+  -H "X-API-KEY: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"input_texts": ["This is a test run.", "This is another test run."]}'
+  -d '{
+    "input_texts": ["This is a test run.", "This is another test run."]
+  }'
 ```
 
 **Python**
 ```python
 import requests
 
-response = requests.post(
-    "https://indieml.app/v1/score/substance/batch",
-    headers={"X-API-Key": "YOUR_API_KEY_HERE"},
-    json={"input_texts": ["This is a test run.", "This is another test run."]}
-)
+url = "https://indieml.app/v1/score/substance/batch"
+headers = {
+    "X-API-KEY": "YOUR_API_KEY",
+    "Content-Type": "application/json"
+}
+payload = {
+    "input_texts": ["This is a test run.", "This is another test run."]
+}
+
+response = requests.post(url, json=payload, headers=headers)
 print(response.json())
 ```
 
 **Node.js**
 ```javascript
-const response = await fetch("https://indieml.app/v1/score/substance/batch", {
-  method: "POST",
+const response = await fetch('https://indieml.app/v1/score/substance/batch', {
+  method: 'POST',
   headers: {
-    "X-API-Key": "YOUR_API_KEY_HERE",
-    "Content-Type": "application/json"
+    'X-API-KEY': 'YOUR_API_KEY',
+    'Content-Type': 'application/json'
   },
-  body: JSON.stringify({ input_texts: ["This is a test run.", "This is another test run."] })
+  body: JSON.stringify({
+    input_texts: ["This is a test run.", "This is another test run."]
+  })
 });
 console.log(await response.json());
 ```
@@ -102,12 +111,15 @@ from indieml import Substance
 # Initialize the API
 api = Substance(api_key="YOUR_API_KEY_HERE")
 
-# Evaluate a single string
+# Single string
 single_result = api.score("This is a test run.")
 print(single_result)
 
-# Evaluate an array of strings (automatically chunks into batches of 100)
-batch_result = api.score_batch(["This is a test run.", "This is another test run."])
+# Array of strings
+batch_result = api.score_batch([
+    "This is a test run.", 
+    "This is another test run."
+])
 print(batch_result)
 ```
 
