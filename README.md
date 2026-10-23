@@ -30,6 +30,25 @@ response = requests.post(
 print(response.json())
 ```
 
+**Python**
+```python
+import requests
+
+url = "https://indieml.app/v1/score/substance"
+headers = {
+    "X-API-KEY": "YOUR_API_KEY",
+    "Content-Type": "application/json"
+}
+payload = {
+    "input_text": "This is a test run."
+}
+
+response = requests.post(url, json=payload, headers=headers)
+print(response.json())
+```
+
+
+
 **Node.js**
 ```javascript
 const response = await fetch("https://indieml.app/v1/score/substance", {
