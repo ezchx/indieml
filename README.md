@@ -254,7 +254,6 @@ The Substance API is a fast and inexpensive pre-screening tool designed to integ
 
 ### RAG Pipelines & Retrieval
 Stop paying tokens for noise. Pre-filter scraped pages and document chunks, dropping menus, boilerplate, and stub text before it reaches your embedding model.\
-https://indieml.app/langchain.html
 [LangChain Integration Guide](https://indieml.app/langchain.html)
 
 ### Agent Memory Filtering
@@ -275,8 +274,8 @@ Scan existing vector databases and remove low-substance embeddings to improve se
 ## Human Facing Applications
 
 ### CRM & Support Tickets
-Score support tickets and bug reports before a human opens them. Auto-request missing details from vague one-liners and prioritize actionable messages.
-[Salesforce Integration Guide](https://github.com/ezchx/indieml-salesforce-integration)
+Score support tickets and bug reports before a human opens them. Auto-request missing details from vague one-liners and prioritize actionable messages.\
+[Salesforce Integration Guide](https://github.com/ezchx/indieml-salesforce-integration)\
 [Zendesk Integration Guide](https://github.com/ezchx/indieml-zendesk-integration)
 
 ### User Feedback & Reviews
