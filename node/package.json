@@ -1,6 +1,6 @@
 {
   "name": "indieml",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Node.js and TypeScript client for the IndieML Substance scoring API",
   "repository": {
     "type": "git",
