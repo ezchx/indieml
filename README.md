@@ -30,9 +30,13 @@ headers = {
 payload = {
     "input_text": "This is a test run."
 }
-
 response = requests.post(url, json=payload, headers=headers)
-print(response.json())
+
+if response.status_code != 200:
+    error_data = response.json()
+    print(f"HTTP {response.status_code}: {error_data.get('detail')}")
+else:
+    print(response.json())
 ```
 
 
