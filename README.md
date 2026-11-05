@@ -88,9 +88,13 @@ headers = {
 payload = {
     "input_texts": ["This is a test run.", "This is another test run."]
 }
-
 response = requests.post(url, json=payload, headers=headers)
-print(response.json())
+
+if response.status_code != 200:
+    error_data = response.json()
+    print(f"HTTP {response.status_code}: {error_data.get('detail')}")
+else:
+    print(response.json())
 ```
 
 **Node.js**
@@ -105,7 +109,14 @@ const response = await fetch('https://indieml.app/v1/score/substance/batch', {
     input_texts: ["This is a test run.", "This is another test run."]
   })
 });
-console.log(await response.json());
+
+if (!response.ok) {
+  const errorData = await response.json();
+  console.error(`HTTP ${response.status}:`, errorData.detail);
+} else {
+  const data = await response.json();
+  console.log(data);
+}
 ```
 
 ## Python SDK
