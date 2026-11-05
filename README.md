@@ -53,7 +53,14 @@ const response = await fetch('https://indieml.app/v1/score/substance', {
     input_text: "This is a test run."
   })
 });
-console.log(await response.json());
+
+if (!response.ok) {
+  const errorData = await response.json();
+  console.error(`HTTP ${response.status}:`, errorData.detail);
+} else {
+  const data = await response.json();
+  console.log(data);
+}
 ```
 
 ### Batch Evaluation
