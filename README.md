@@ -248,28 +248,50 @@ For local Linux, Mac, and Windows clients that require stdio transport, use the 
 
 ## Applications & Use Cases
 
-The Substance API is a fast and inexpensive pre-screening tool designed to integrate with your existing filters.
+The Substance API is a fast and inexpensive pre-screening tool designed to integrate with your existing classification pipeline. It is specifically designed for high-volume, automated data pipelines.
 
-While it evaluates substance across any text, it is uniquely suited for high-volume, automated data pipelines:
+## Machine Facing Applications
 
-### Inbox & Intake Triage
-Score support tickets, shared mailboxes, lead forms, and bug reports before a human opens them. Auto-request missing details from vague one-liners and put detailed, actionable messages first. Works as an API call, a mail header, or a label in the tools you already use.\
-[Salesforce Integration Guide](https://github.com/ezchx/indieml-salesforce-integration)  
-[Zendesk Integration Guide](https://github.com/ezchx/indieml-zendesk-integration)
+### RAG Pipelines & Retrieval
+Stop paying tokens for noise. Pre-filter scraped pages and document chunks, dropping menus, boilerplate, and stub text before it reaches your embedding model.\
+https://indieml.app/langchain.html
+[LangChain Integration Guide](https://indieml.app/langchain.html)
 
-### Live Input Coaching
-Catch thin submissions at the source. Add IndieML to forms, listings, and bug reporters to prompt people for what's missing while they're still typing. Your team gets complete, usable input the first time, without chasing follow-ups.
+### Agent Memory Filtering
+Keep autonomous agent scratchpads clean. Filter tool outputs and intermediate web crawls so the LLM only retains dense facts, preventing context window bloat.
 
-### Feedback & Review Triage
-Separate real signal from "great app" and "it's broken." Score survey responses, NPS comments, and app reviews as they arrive, then route detailed, reproducible feedback to Jira, Linear, or Slack and keep generic noise out of the way.
-
-### LLM Context & RAG Filtering
-Stop paying tokens for noise. Pre-filter scraped pages, tool outputs, and document chunks, dropping menus, boilerplate, and stub text before it reaches your embedding model or prompt. Lower cost, faster calls, better answers.
+### Prompt Gating
+Reject low-context user prompts (like "fix my code") before triggering expensive LLM inferences, forcing users to provide useful detail first.
 
 ### Dataset Curation
-Rank and filter large text collections without paying for LLM-as-a-judge. Build fine-tuning sets, clean scraped corpora, and assemble eval sets by keeping high-substance text and dropping filler, in batch and at scale.
+Rank and filter large text collections without paying for LLM-as-a-judge. Build fine-tuning sets by keeping high-substance text and dropping filler at scale.
 
-### Content & Output Quality
-Surface the most substantive answers, comments, and reviews in communities and feeds, or monitor chatbot and agent responses for fluff in CI and production. One consistent score for any text where depth matters.
+### Web Crawling
+Drop SEO filler, navigation menus, and repetitive boilerplate from raw HTML crawls before they enter your data ingestion pipelines.
+
+### Vector Database Pruning
+Scan existing vector databases and remove low-substance embeddings to improve search accuracy and reduce cloud storage costs.
+
+## Human Facing Applications
+
+### CRM & Support Tickets
+Score support tickets and bug reports before a human opens them. Auto-request missing details from vague one-liners and prioritize actionable messages.
+[Salesforce Integration Guide](https://github.com/ezchx/indieml-salesforce-integration)
+[Zendesk Integration Guide](https://github.com/ezchx/indieml-zendesk-integration)
+
+### User Feedback & Reviews
+Separate real signal from "great app" and "it's broken." Score survey responses and route reproducible feedback to Jira, keeping generic noise away from product managers.
+
+### Online Forums & Communities
+Surface the most substantive answers in communities and social feeds. Automatically bury reactive, low-effort noise to elevate high-quality, thoughtful discussions.
+
+### Live Input Coaching
+Catch thin submissions at the source. Add IndieML to forms and bug reporters to prompt people for what's missing while they're still typing.
+
+### Email & Message Triage
+Score inbound lead forms and public-facing email addresses. Flag dense, high-value inquiries for immediate attention while routing empty corporate filler to the archive.
+
+### Form & Application Intake
+Score grant proposals, vendor requests, or job applications upon submission to ensure human evaluators only spend time reading substantive, high-effort documents.
 
 <!-- mcp-name: io.github.ezchx/indieml -->
