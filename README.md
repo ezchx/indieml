@@ -154,36 +154,51 @@ npm install indieml
 
 **Usage (CommonJS)**
 ```javascript
-
 const { IndieML } = require('indieml');
 
 // Initialize the API
-const api = new IndieML({ apiKey: 'YOUR_API_KEY_HERE' });
+const api = new IndieML({ apiKey: "YOUR_API_KEY_HERE" });
 
-// Evaluate a single string
-const singleResult = await api.score("This is a test run.");
-console.log(singleResult);
+async function run() {
+  // Single string
+  const singleResult = await api.score("This is a test run.");
+  console.log(singleResult);
 
-// Evaluate an array of strings (automatically chunks into batches of 100)
-const batchResult = await api.scoreBatch(["This is a test run.", "This is another test run."])
-console.log(batchResult)
+  // Array of strings
+  const batchResult = await api.scoreBatch([
+    "This is a test run.",
+    "This is another test run."
+  ]);
+  console.log(batchResult);
+}
+
+run().catch(console.error);
 ```
 
 **Usage (ES Modules / TypeScript)**
 ```javascript
+/**
+ * Note: This example uses ES Module syntax and top-level await.
+ * To run this file, either:
+ * 1. Save the file with an .mjs extension (e.g., example.mjs) OR
+ * 2. Add "type": "module" to your project's package.json file.
+ */
 
 import { IndieML } from 'indieml';
 
 // Initialize the API
-const api = new IndieML({ apiKey: 'YOUR_API_KEY_HERE' });
+const api = new IndieML({ apiKey: "YOUR_API_KEY_HERE" });
 
-// Evaluate a single string
+// Single string
 const singleResult = await api.score("This is a test run.");
 console.log(singleResult);
 
-// Evaluate an array of strings (automatically chunks into batches of 100)
-const batchResult = await api.scoreBatch(["This is a test run.", "This is another test run."])
-console.log(batchResult)
+// Array of strings
+const batchResult = await api.scoreBatch([
+  "This is a test run.",
+  "This is another test run."
+]);
+console.log(batchResult);
 ```
 
 
