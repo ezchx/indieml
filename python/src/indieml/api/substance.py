@@ -26,7 +26,7 @@ class SubstanceAPI:
                     
             except urllib.error.HTTPError as e:
                 # Fail fast on client errors (Bad Request, Unauthorized, Forbidden, Unprocessable)
-                if e.code in (400, 401, 403, 422):
+                if e.code in (400, 401, 403, 422, 429):
                     raise Exception(f"Substance API error ({e.code}): {e.read().decode('utf-8')}")
                 
                 if attempt == max_retries:
