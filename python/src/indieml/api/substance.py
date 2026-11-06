@@ -36,15 +36,15 @@ class SubstanceAPI:
                 if attempt == max_retries:
                     raise Exception(f"Connection failed after {max_retries} retries: {e.reason}")
             
-            # Exponential backoff (1s, 2s, 4s) for server errors/timeouts
+            # Exponential backoff (1s, 2s, 4s, 8s) for server errors/timeouts
             time.sleep(2 ** attempt)
 
-    def score(self, text: str, max_retries: int = 3) -> dict:
+    def score(self, text: str, max_retries: int = 4) -> dict:
         """Evaluate a single string for substance."""
         response_data = self._make_request(self.base_url, {"input_text": text}, max_retries)
         return response_data.get("result", response_data)
 
-    def score_batch(self, texts: List[str], max_retries: int = 3) -> List[Dict[str, Any]]:
+    def score_batch(self, texts: List[str], max_retries: int = 4) -> List[Dict[str, Any]]:
         """Evaluate a list of strings, automatically chunking them into blocks of 100."""
         all_results = []
         chunk_size = 100
