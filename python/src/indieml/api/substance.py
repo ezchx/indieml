@@ -26,7 +26,7 @@ class SubstanceAPI:
                     
             except urllib.error.HTTPError as e:
                 # Fail fast on client errors (Bad Request, Unauthorized, Forbidden, Unprocessable)
-                if e.code in (400, 401, 403, 422, 429):
+                if e.code not in (408, 500, 502, 503, 504):
                     raise Exception(f"Substance API error ({e.code}): {e.read().decode('utf-8')}")
                 
                 if attempt == max_retries:
@@ -36,15 +36,15 @@ class SubstanceAPI:
                 if attempt == max_retries:
                     raise Exception(f"Connection failed after {max_retries} retries: {e.reason}")
             
-            # Exponential backoff (1s, 2s, 4s, 8s, 16s, 32s) for server errors/timeouts
+            # Exponential backoff (1s, 2s, 4s) for server errors/timeouts
             time.sleep(2 ** attempt)
 
-    def score(self, text: str, max_retries: int = 6) -> dict:
+    def score(self, text: str, max_retries: int = 3) -> dict:
         """Evaluate a single string for substance."""
         response_data = self._make_request(self.base_url, {"input_text": text}, max_retries)
         return response_data.get("result", response_data)
 
-    def score_batch(self, texts: List[str], max_retries: int = 6) -> List[Dict[str, Any]]:
+    def score_batch(self, texts: List[str], max_retries: int = 3) -> List[Dict[str, Any]]:
         """Evaluate a list of strings, automatically chunking them into blocks of 100."""
         all_results = []
         chunk_size = 100
