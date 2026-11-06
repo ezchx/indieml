@@ -40,8 +40,8 @@ export class IndieML {
         clearTimeout(timeoutId);
 
         if (!response.ok) {
-          // Fail fast on client errors (Bad Request, Unauthorized, Forbidden, Unprocessable)
-          if ([400, 401, 403, 422].includes(response.status)) {
+          // Fail fast on EVERYTHING except explicitly transient infrastructure errors
+          if (![408, 500, 502, 503, 504].includes(response.status)) {
             const errorText = await response.text();
             throw new Error(`IndieML API Error (${response.status}): ${errorText}`);
           }
@@ -66,7 +66,7 @@ export class IndieML {
           throw new Error(`Connection failed after ${maxRetries} retries: ${error.message}`);
         }
         
-        // Exponential backoff (1s, 2s, 4s, 8s, 16s, 32s)
+        // Exponential backoff (1s, 2s, 4s, 8s)
         await sleep(Math.pow(2, attempt) * 1000);
       }
     }
@@ -77,7 +77,7 @@ export class IndieML {
    * @param text The input string to score.
    * @param maxRetries Maximum number of times to retry failed network requests.
    */
-  async score(text: string, maxRetries: number = 6): Promise<ScoreResponse> {
+  async score(text: string, maxRetries: number = 4): Promise<ScoreResponse> {
     const url = `${this.baseUrl}/score/substance`;
     const data = await this._makeRequest(url, { input_text: text }, maxRetries);
     return data.result as ScoreResponse;
@@ -88,7 +88,7 @@ export class IndieML {
    * @param texts Array of input strings to score.
    * @param maxRetries Maximum number of times to retry failed network requests.
    */
-  async scoreBatch(texts: string[], maxRetries: number = 6): Promise<ScoreResponse[]> {
+  async scoreBatch(texts: string[], maxRetries: number = 4): Promise<ScoreResponse[]> {
     const allResults: ScoreResponse[] = [];
     const chunkSize = 100;
     const batchUrl = `${this.baseUrl}/score/substance/batch`;
