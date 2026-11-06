@@ -25,7 +25,7 @@ class SubstanceAPI:
                     return json.loads(response.read().decode("utf-8"))
                     
             except urllib.error.HTTPError as e:
-                # Fail fast on client errors (Bad Request, Unauthorized, Forbidden, Unprocessable)
+                # Fail fast on EVERYTHING except explicitly transient infrastructure errors
                 if e.code not in (408, 500, 502, 503, 504):
                     raise Exception(f"Substance API error ({e.code}): {e.read().decode('utf-8')}")
                 
